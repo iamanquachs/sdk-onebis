@@ -1,0 +1,29 @@
+{
+  "name": "sdk",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run build:sdk && npm run compile",
+    "build:sdk": "rimraf ../../src/api/functional && cd ../.. && npx nestia sdk && cd packages/sdk",
+    "compile": "rimraf lib && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samchon/nestia"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "ts-patch": "^3.1.1",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@nestia/fetcher": "^2.4.3",
+    "typia": "^5.3.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
